@@ -1,0 +1,40 @@
+# CategoryEntities.pseudo
+  Entities
+  id: Integer
+  name: String
+  
+#ProductEntities.pseudo
+ id: Integer
+  name: String
+  preco: String
+
+#OrderEntities.pseudo
+  id: Integer
+  instant: Date
+    
+#CategoryRepository.pseudo
+  SELECT * from catetory;
+
+#ProductRepository.pseudo
+  SELECT * from product;
+
+#CategoryService.pseudo
+
+#ProductService.pseudo
+
+#ProductController
+ ProductController
+  GET '/api/product'
+    findAll =  findProduct()
+     IF (product existe)
+        RETURN "product", status: 200
+      ELSE
+        RETURN body "You can't book this slot", status: 400
+      END
+    ELSE
+      RETURN body "Deadline should be respected!", status: 500
+    END
+  END
+
+  
+
